@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memori Maps - Share Your Favorite Places</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="events.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD62yZ7DbCfkocqXJYT10lYYT7bvvDphd8
+  &libraries=places&callback=initMap" async defer></script>
+  <script src="events.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="home.html" class="logo-container">
+        <img src="small_logo.jpeg" alt="Memori Logo" class="header-logo">
+        <span class="logo-text">Memori Maps</span>
+      </a> <!-- our logo-->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="#reviews">Reviews</a>
+        <a href="scarpbook.html">My Scrapbook</a>
+        <a href="profile.html">Profile</a>
+        <a href="home.html" id="logoutLink">Logout</a>
+        <div class="logged-in-user">
+            <img id="userAvatar" src="icon.jpeg">
+            <span id="userEmail"> Logged in as: guest@example.com</span>
+        </div>
+    </nav>
+</header>
+
+  <!-- SEARCH & MAP SECTION -->
+  <section class="map-container">
+    <input id="searchBox" type="text" placeholder="Search for a place..." autocomplete="off">
+    <div id="map" style="height: 400px; width: 80%; margin: auto;"></div>
+  </section>
+
+<!-- REVIEWS SECTION -->
+<section id="reviews" class="reviews">
+    <h2>Your Past Reviews</h2>
+    <h5>📖 Visit to Nandos</h5>
+    <p>Visited: 28-02-2025</p>
+    <p>NOTE: The food was great and the staff were so nice</p>
+    <button class="open-btn">📂 View Pictures</button>
+
+<!-- REVIEWS SECTION -->
+<section id="reviews" class="reviews">
+    <h2>Your Community Reviews</h2>
+
+    <!-- Fake Reviews Carousel -->
+    <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="carousel-inner">
+            <!-- Example Review 1 -->
+            <div class="carousel-item active">
+                <div class="review-content">
+                    <img src="market.jpeg" class="review-img" alt="Market Scene">
+                    <div class="review-card">
+                        <h5>Jessica</h5>
+                        <p>"Camden Market was amazing! The food was incredible, and the atmosphere was so lively. Can't wait to go back!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Review 2 -->
+            <div class="carousel-item">
+                <div class="review-content">
+                    <img src="food.jpeg" class="review-img" alt="Delicious Food">
+                    <div class="review-card">
+                        <h5>Michael</h5>
+                        <p>"I had the best tacos ever here! Also found some cool vintage shops. Highly recommend!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Review 3 -->
+            <div class="carousel-item">
+                <div class="review-content">
+                    <img src="umbrella.jpeg" class="review-img" alt="Colorful Umbrellas">
+                    <div class="review-card">
+                        <h5>Emily</h5>
+                        <p>"Next time, we should all go together! I loved the dessert stalls, especially the chocolate-covered strawberries!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+<!-- Friend Responses -->
+<section class="friend-responses">
+    <h3>Friends Responding</h3>
+    <div id="responses">
+        <p><strong>Chris:</strong> "We should totally plan a trip there!"</p>
+        <p><strong>Sarah:</strong> "I want to try those tacos so badly!"</p>
+    </div>
+    <textarea id="friend-comment" placeholder="Write a response..."></textarea>
+    <button id="replyButton" onclick="addFriendResponse()">Reply
+</section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Memori Maps. Discover & Share Your Favorite Places.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,272 @@
+/* General Styling */
+body {
+    font-family: 'Giaza';
+    background-color: #e3e2dd;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+/* HEADER */
+header {
+    background-color: #4e341b;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.navlist {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navlist a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.navlist a:hover {
+    background-color: #6a5031;
+}
+/* User Profile */
+.logged-in-user {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.logged-in-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+/* Show user email */
+#userEmail {
+    background-color: #c793ac;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+.logged-in-user:hover #userEmail {
+    opacity: 1;
+    visibility: visible;
+}
+/* Scrapbook styling */
+#scrapbook {
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border: 2px solid purple;
+    min-height: 500px;
+    position: relative;
+}
+.page {
+    width: 90%;
+    min-height: 500px;
+    background: white;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+/* this is for the added Items */
+.text-box, .image-box {
+    position: absolute;
+    border: 1px dashed #4e341b;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    cursor: move;
+    resize: both;
+    overflow: auto;
+}
+
+.image-box img {
+    max-width: 100px;
+    max-height: 100px;
+}
+/* Button */
+.delete-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* toolbar */
+.toolbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: static;
+    bottom: 60;
+    width: 100%;
+}
+
+.toolbar button, .toolbar input {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+/* Saved Scrapbooks */
+#savedScrapbooksContainer {
+    width: 80%;
+    margin: 20px auto;
+}
+.saved-user {
+    text-align: left;
+    margin-top: 30px;
+}
+/* saved scrapbook layout */
+.saved-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+.saved-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #4e341b;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.saved-item:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+}
+.open-btn {
+    background: #4e341b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.open-btn:hover {
+    background: #6a5031;
+}
+.saved-item a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1f78d1;
+}
+
+.saved-item a:hover {
+    color: #125699;
+}
+/* this is for each button on the */
+.yellow_button {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.yellow_button:hover {
+    background-color: gold;
+}
+.blue_button {
+    background-color: rgb(0, 26, 255);
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.blue_button:hover {
+    background-color: gold;
+}
+
+.red_button {
+    background-color: rgb(255, 0, 0);
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.red_button:hover {
+    background-color: gold;
+}
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    margin: 15% auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Scrapbook Container */
+#scrapbookContainer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    border: none;
+    margin-top: 10px;
+}
+

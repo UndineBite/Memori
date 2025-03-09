@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Memori</title>
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <!-- user profile -->
+  <header>
+    <div class="header-container">
+        <a href="home.html" class="logo-container">
+            <img src="small_logo.jpeg" alt="Memori Logo" class="header-logo">
+            <span class="logo-text">Memori Maps</span>
+        </a>
+        <nav class="navlist">
+            <a href="home.html">Home</a>
+            <a href="scarpbook.html">My Scrapbook</a>
+            <a href="events.html">My Places</a>
+            <a href="home.html" id="logoutLink">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<!-- icon -->
+<section class="profile-container">
+    <div class="profile-info">
+        <img src="icon.jpeg" alt="User Profile" class="profile-pic">
+        <h2 id="username">Guest User</h2>
+        <p id="user-email">Email: guest@example.com</p>
+        <button onclick="editProfile()">Edit Profile</button>
+    </div>
+  <!-- allow you to see your currenr groups/add more -->
+    <div class="profile-sections">
+        <div class="profile-box">
+            <h3>My Groups</h3>
+            <ul id="user-groups">
+                <li>📖 Digital Scrapbook Enthusiasts - Monthly Password: Jakesbday</li>
+                <li>📍 Travel & Memories- Monthly Password: lucydog</li>
+                <li>🎨 Creative Journalers- Monthly Password: lastweekend</li>
+            </ul>
+            <button onclick="createGroup()">➕ Create New Group</button>
+        </div>
+  <!-- achievements to date -->
+        <div class="profile-box">
+            <h3>Achievements</h3>
+            <p>🏆 **Memory Keeper** - Created 5 Scrapbooks</p>
+            <p>📍 **Explorer** - Added 10 Locations</p>
+            <p>🎉 **Social Butterfly** - Connected with 5 Friends</p>
+        </div>
+    </div>
+</section>
+
+<script src="profile.js"></script>
+
+</body>
+</html>

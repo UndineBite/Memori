@@ -1,0 +1,317 @@
+/* GENERAL STYLES */
+body {
+    font-family: 'Giaza';
+    margin: 0;
+    padding: 0;
+    background-color: #e3e2dd;
+    color: #000000;
+    text-align: center;
+  }
+  
+/* Ensure header is properly aligned */
+header {
+    background-color: #4e341b;
+    padding: 15px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Align logo and text side by side */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Adjust logo size and spacing */
+.header-logo {
+    width: 50px;  /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;  /* Space between logo and text */
+}
+
+/* Adjust text alignment */
+.logo-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Adjust navigation bar */
+.navlist a {
+    color: white;
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navlist a:hover {
+    color: #e3e2dd;
+}  
+  .cta-button {
+    background-color: rgb(109, 64, 30);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  .cta-button:hover {
+    background-color: #f5f9d8;
+    color: white;
+  }
+  .profile-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+  
+  /* HERO SECTION */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px 10%;
+    background-color: #e3e2dd;
+    gap: 50px;
+  }
+  .pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+    text-align: left;
+      
+  }
+  
+  .hero-text h1 {
+    font-size: 50px;
+    color: #4e341b;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text .btn {
+    background-color: #6d523f;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  
+  .hero-text .btn:hover {
+    background-color: #e3e2dd;
+  }
+  
+  .hero-img img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  
+  /* FEATURES SECTION */
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 10%;
+    background-color: #e3e2dd;
+  }
+  
+  .feature-box {
+    background-color: #b88e7d ;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    width: 30%;
+  }
+  
+  .feature-box i {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .feature-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+/* Style for the header login button */
+.cta-button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ffefd8;
+}
+
+/* Style for the login modal */
+.modal-content {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.custom-button {
+    background-color: #633b23;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: #ffe9b6;
+}
+
+/* ABOUT US SECTION */
+  
+.aboutus {
+    background-color: #e3e2dd;
+    height: 100%;
+    width: 100%;
+    min-height: 80vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    line-height: 1.6;
+    margin: auto;
+    padding: 40px 9%;
+    font-size: 25px;
+    
+    }
+    
+    
+    .ab {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    gap: 2rem;
+    background-color: #e3e2dd;
+    padding: 0 10%;
+    line-height: 1.6;
+    }
+    
+    .ab h2 {
+        font-size: 35px;
+        color: #4e341b;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+        max-width: 1200px;
+    }
+    
+    .photos {
+    background-color: #e3e2dd;
+    display: inline-flex;
+    gap: 30px;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    
+    }
+    
+    #jennifer {
+    height: 250px;
+    width: 250px;
+    border-radius: 150px;
+    display: inline-flex;
+    position: relative;
+    
+    }
+    
+    #sanda {
+    height: 250px;
+    width: 250px;
+    border-radius: 150px;
+    display: inline-flex;
+    position: relative;
+    
+    }
+    
+    #undine {
+    height: 250px;
+    width: 250px;
+    border-radius: 150px;
+    display: inline-flex;
+    position: relative;
+    
+    }
+    
+    #yashita {
+    height: 250px;
+    width: 250px;
+    border-radius: 150px;
+    display: inline-flex;
+    position: relative;
+    
+    }
+    
+    .abu-text {
+    color: rgb(48, 46, 46);
+    font-size: 25px;
+    }
+
+.main-paragraph {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 20px 25px;
+    background-color: #cba393;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+  /* FOOTER */
+  footer {
+    background-color: #6F4E37; /* Darker Brown */
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

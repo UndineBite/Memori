@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memori Books</title>
+    <link rel="stylesheet" href="scarpbook.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="scrapbook.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1 class="logo">Memori Books</h1>
+        <nav class="navlist">
+            <a href="home.html">Home</a>
+            <a href="events.html">My Places</a>
+            <a href="profile.html">Profile</a>
+            <a href="home.html">Logout</a>
+            <div class="logged-in-user">
+                <img id="userAvatar" src="icon.jpeg">
+                <span id="userEmail">Logged in as: guest@example.com</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SCRAPBOOK -->
+    <div id="scrapbook">
+        <div class="page">
+            <h2>My Scrapbook</h2>
+            <p>Upload your favorite photos and stories.</p>
+        </div>
+    </div>
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+        <input type="file" id="uploadImage" accept="image/*" onchange="addImage(event)">
+        <button class='yellow_button'onclick="addBlankPage()" color>➕ Add Blank Page</button>
+        <button class='blue_button'onclick="addText()">📝 Add Text</button>
+        <button class='red_button' onclick="saveToPDF()">💾 Save as PDF</button>
+    </div>
+
+    <!-- SAVED SCRAPBOOKS -->
+    <h3>Saved Scrapbooks</h3>
+    <div id="savedScrapbooksContainer">
+
+        <!-- Example User -->
+        <div class="saved-user">
+            <h4>Michael's Scrapbooks</h4>
+            <div class="saved-grid">
+                <div class="saved-item">
+                    <h5>📖 Michael's Scrapbook</h5>
+                    <p>Saved on: 28-02-2025</p>
+                    <p>NOTE: Hey all! This is my scrapbook for this week!</p>
+
+                    <!-- Password Protection Modal -->
+<!-- Password Protection Modal -->
+<div id="passwordModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Enter Password</h2>
+        <input type="password" id="scrapbookPassword" placeholder="Enter password">
+        <button onclick="checkPassword()">🔓 Unlock</button>
+        <p id="errorMessage" style="color: red; display: none;">Incorrect password, try again.</p>
+    </div>
+</div>
+
+<!-- Open Scrapbook Button -->
+<button class="open-btn" onclick="showPasswordModal()">📂 Open Scrapbook</button>
+
+<!-- Hidden Container for Scrapbook -->
+<div id="scrapbookContainer" style="display: none; text-align: center;">
+    <h2>📖 Scrapbook Document</h2>
+    
+    <!-- View Scrapbook inside an iFrame -->
+    <iframe src="trip.pdf" width="80%" height="500px"></iframe>
+</div>
+
+
+<!-- Updated Open Scrapbook Button -->
+<button class="open-btn" onclick="showPasswordModal()">📂 Open Scrapbook</button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Saved scrapbooks -->
+        <div class="saved-user">
+            <h4>My Saved Scrapbooks</h4>
+            <div class="saved-grid">
+                <div class="saved-item">
+                    <h5>📁 scrapbook-2025-03-01.pdf</h5>
+                    <p>Saved on: 01/03/2025</p>
+                    <p>Note: My weekly day out with Sam and Jessica!!</p>
+                    <a href="path/to/pdf" download>📥 Download</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

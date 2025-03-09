@@ -1,0 +1,163 @@
+/* General styling */
+body {
+  font-family: 'Giaza';
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  padding-top: 80px;
+}
+/* HEADER */
+header {
+  background-color: #4e341b;
+  padding: 15px 9%;
+  font-family: 'Giaza';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0; /* Ensure it spans from the left */
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px; /* Add max width to prevent stretching */
+  margin: 0 auto; /* Center it properly */
+}
+
+/* Properly space navigation */
+.navlist {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navlist a {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: all 0.3s;
+}
+
+.navlist a:hover {
+  color: #e3e2dd;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+.logo-text {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.logged-in-user {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.logged-in-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+#userEmail {
+    background-color: #c793ac;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show Email when Hovering */
+.logged-in-user:hover #userEmail {
+    opacity: 1;
+    visibility: visible;
+}
+  
+  .nav a:hover {
+    color: #ddd6e4;
+  }
+
+/* Profile layout */
+.profile-container {
+  width: 80%;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 120px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile-sections {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.profile-box {
+  width: 40%;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.profile-box h3 {
+  text-align: center;
+}
+
+button {
+  background: #4e341b;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #6a5031;
+}

@@ -1,0 +1,244 @@
+/* GENERAL BODY */
+body {
+    font-family: 'Giaza';
+    margin: 0;
+    padding: 0;
+    padding-bottom: 70px;
+    background-color: #e3e2dd;
+    text-align: center;
+  }
+  
+/* HEADER */
+header {
+  background-color: #4e341b;
+  padding: 15px 9%;
+  font-family: 'Giaza';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.header-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 5px; 
+}
+.logo-text {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.navlist a {
+  color: white;
+  margin: 0 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navlist a:hover {
+  color: #e3e2dd;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.logged-in-user {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.logged-in-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+#userEmail {
+    background-color: #c793ac;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show Email when Hovering */
+.logged-in-user:hover #userEmail {
+    opacity: 1;
+    visibility: visible;
+}
+  
+  .nav a:hover {
+    color: #ddd6e4;
+  }
+  
+  .cta-button {
+    background-color: white;
+    color: #5a2d82;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  
+  .cta-button:hover {
+    color: white;
+  }
+  
+  /* MAP SECTION */
+  .map-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #searchBox {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #5a2d82;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  
+  #map {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    border: 3px solid #2d3e82;
+    margin: auto;
+  }
+  
+/* Review Section */
+.reviews {
+    padding: 40px 10%;
+    background-color: white;
+    text-align: center;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Carousel Image */
+.review-img {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Review Card */
+.review-card {
+    background-color: #5c6e7e;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #5a2d82;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Friend Responses Section */
+.friend-responses {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #a5b8ab;
+    border-radius: 10px;
+    text-align: left;
+}
+
+#responses p {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+/* Response Input */
+#friend-comment {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #5A7262;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#replyButton {
+    background-color: #0d300d ;
+    color: white ;
+    padding: 12px 20px ;
+    border: none ;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block ;
+    width: fit-content;
+}
+
+/* FOOTER */
+footer {
+  font-family: 'Giaza';
+  background-color: #6F4E37;
+  color: white;
+  padding: 15px;
+  margin-top: 0 20px;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  gap: 50px;
+  left: 0;
+  height: 50px;
+}
