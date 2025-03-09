@@ -35,7 +35,7 @@
   document.addEventListener("DOMContentLoaded", function() {
     if (localStorage.getItem("userLoggedIn") === "true") {
       const currentPage = window.location.pathname.split("/").pop();
-      if (currentPage !== "home.html") {
+      if (currentPage !== "index.html") {
         window.location.href = "events.html";
       }
     }
